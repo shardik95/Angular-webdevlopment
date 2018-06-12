@@ -8,4 +8,5 @@
     <button (click)="deleteCourse(course.id)">Delete Course</button>
   </li>
 </ul>
-<button (click)="addCourse()">Add course</button>
+<input [(ngModel)]="courseTitle"/>
+<button (click)="addCourse(courseTitle)">Add course</button>

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HelloWorldComponent implements OnInit {
 
   message = 'Hello from hello world!';
+  courseTitle;
 
   courses = [
     {title: 'CS5200', id: 123},
@@ -22,11 +23,12 @@ export class HelloWorldComponent implements OnInit {
     ));
   }
 
-  addCourse() {
+  addCourse(title) {
     this.courses.push({
-      title: 'New Course',
-      id: 321
+      title: title,
+      id: title
     });
+    this.courseTitle = '';
   }
 
   constructor() { }
