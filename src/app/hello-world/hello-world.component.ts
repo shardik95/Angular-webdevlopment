@@ -7,6 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
 
+  message = 'Hello from hello world!';
+
+  courses = [
+    {title: 'CS5200', id: 123},
+    {title: 'CS5610', id: 234},
+    {title: 'CS3200', id: 345},
+    {title: 'CS4550', id: 456}
+  ];
+
+  deleteCourse(courseId) {
+    this.courses = this.courses.filter(course => (
+      course.id !== courseId
+    ));
+  }
+
+  addCourse() {
+    this.courses.push({
+      title: 'New Course',
+      id: 321
+    });
+  }
+
   constructor() { }
 
   ngOnInit() {
