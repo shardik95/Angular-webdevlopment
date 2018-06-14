@@ -10,12 +10,21 @@ import {ModuleServiceClient} from '../services/module.service.client';
 export class ModuleListComponent implements OnInit {
 
   constructor(private route:ActivatedRoute,private service:ModuleServiceClient) {
-    this.route.params.subscribe(params=>this.loadModules(params['courseId']))
+    this.route.params.subscribe(params=>this.setParams(params))
   }
 
+  courseId;
+  moduleId;
   modules=[]
 
+  setParams(params){
+    this.courseId=params['courseId'];
+    this.moduleId=params['moduleId'];
+    this.loadModules(this.courseId)
+  }
+
   loadModules(courseId){
+    this.courseId=courseId;
     this.service.findAllModules(courseId)
       .then(modules=>this.modules=modules)
   }
