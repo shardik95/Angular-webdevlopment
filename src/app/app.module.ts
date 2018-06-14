@@ -6,18 +6,27 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import {CourseNavigationServiceClient} from './services/course-navigation.service.client';
 import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
+import { WhiteBoardComponent } from './white-board/white-board.component';
+import {CourseServiceClient} from './services/course.service.client';
+import { CourseGridComponent } from './course-grid/course-grid.component';
+import {routing} from './app.routing';
+import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
-    CourseNavigatorComponent
+    CourseNavigatorComponent,
+    WhiteBoardComponent,
+    CourseGridComponent,
+    CourseViewerComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [CourseNavigationServiceClient],
+  providers: [CourseNavigationServiceClient, CourseServiceClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
