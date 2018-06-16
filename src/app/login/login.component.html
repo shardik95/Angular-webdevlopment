@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Login</h1>
+
+  <input type="text" [(ngModel)]="username"
+  placeholder="Username"
+  class="form-control"/>
+  <br/>
+
+  <input type="text" [(ngModel)]="password"
+         placeholder="password"
+         class="form-control"/>
+  <br/>
+
+  <button class="btn btn-success btn-block" (click)="login(username,password)">
+    Login
+  </button>
+
+  <a routerLink="/register">register</a>&nbsp;
+  <a routerLink="/home">home</a>
+
+</div>

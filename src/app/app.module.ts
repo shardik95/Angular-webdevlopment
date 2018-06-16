@@ -15,6 +15,10 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import {ModuleServiceClient} from './services/module.service.client';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import {LessonServiceClient} from './services/lesson.service.client';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import {UserServiceClient} from './services/user.service.client';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,17 @@ import {LessonServiceClient} from './services/lesson.service.client';
     CourseGridComponent,
     CourseViewerComponent,
     ModuleListComponent,
-    LessonTabsComponent
+    LessonTabsComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing
   ],
-  providers: [CourseNavigationServiceClient, CourseServiceClient,ModuleServiceClient,LessonServiceClient],
+  providers: [CourseNavigationServiceClient, CourseServiceClient,ModuleServiceClient,LessonServiceClient,UserServiceClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

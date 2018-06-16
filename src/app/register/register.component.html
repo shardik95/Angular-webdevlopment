@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h1>Register!</h1>
+
+  <input class="form-control" [(ngModel)]="username" placeholder="Username">
+  <br/>
+  <input class="form-control" [(ngModel)]="password" placeholder="Password">
+  <br/>
+  <input class="form-control" [(ngModel)]="password2" placeholder="Verify Password">
+  <br/>
+
+  <button class="btn btn-success" (click)="register(username,password,password2)">register</button>
+
+  <a routerLink="/login">login</a>&nbsp;
+  <a routerLink="/home">home</a>
+
+</div>
