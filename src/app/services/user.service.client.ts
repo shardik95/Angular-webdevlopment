@@ -18,6 +18,22 @@ export  class UserServiceClient{
 
   }
 
+  login(username,password){
+     var credentials={
+       username:username,
+       password:password
+     }
+
+     return fetch("http://localhost:4000/api/login",{
+       method:'post',
+       headers:{
+         'content-type':'application/json'
+       },
+       credentials: 'include',
+       body:JSON.stringify(credentials)
+     })
+  }
+
   logout(){
      return fetch("http://localhost:4000/api/logout",{
        method:'post',

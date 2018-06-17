@@ -20,4 +20,12 @@
 
   <a (click)="logout()">logout</a>&nbsp;
   <a routerLink="/home">Home</a>
+
+  <h2>Sections {{sections.length}}</h2>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let section of sections">
+      {{section.section.name}}
+    </li>
+  </ul>
 </div>

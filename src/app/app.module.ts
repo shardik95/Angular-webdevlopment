@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import {UserServiceClient} from './services/user.service.client';
+import { SectionListComponent } from './section-list/section-list.component';
+import {SectionServiceClient} from './services/section.service.client';
 
 @NgModule({
   declarations: [
@@ -32,14 +34,15 @@ import {UserServiceClient} from './services/user.service.client';
     LessonTabsComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    SectionListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing
   ],
-  providers: [CourseNavigationServiceClient, CourseServiceClient,ModuleServiceClient,LessonServiceClient,UserServiceClient],
+  providers: [CourseNavigationServiceClient, CourseServiceClient,ModuleServiceClient,LessonServiceClient,UserServiceClient,SectionServiceClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
